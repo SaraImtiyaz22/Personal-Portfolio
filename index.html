@@ -1,0 +1,618 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sara's Portfolio </title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet"> 
+
+  <!-- Custom CSS -->
+  <style>
+    /* Body Background */
+    body {
+      background-color: #d4c7af;
+      font-family: 'Playfair Display', serif;
+	color: #3b2f2f;   
+
+}
+.home {
+  min-height: 100vh;
+  padding: 180px 20px 30px 20px;
+  display: flex;
+color: #3b2f2f;
+  flex-direction: column;
+  text-align: center;
+position: relative;
+  align-items: center;
+}
+
+.home h1 {
+  font-size: 58px;
+justify-content: center;
+  margin-bottom: 10px;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #3b2f2f;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 10px;
+}
+
+.contact-item:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #3b2f2f;
+  font-size: 20px;
+}
+
+.contact-item i {
+  margin-right: 5px;
+  color: #3b2f2f;
+}
+
+.tagline {
+  font-size: 20px;
+  font-style: italic;
+}
+
+
+
+.text-section h1 {
+      font-size: 100px;
+      line-height: 0.9;
+    }
+
+    .text-section span {
+      display: block;
+      font-size: 14px;
+      font-family: 'Roboto', sans-serif;
+      margin-top: 10px;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      position: absolute;
+      left: -100px;
+      top: 40%;
+    }
+
+
+.experience {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+.arch {
+  background-color: #d4c7af;
+  width: 600px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #3b2f2f;
+  border-top-left-radius: 300px;
+  border-top-right-radius: 300px;
+  padding-top: 150px; /* Arch gap */
+  padding-bottom: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+.arch-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.inner-content {
+  margin-left: 40px; /* Yeh line important hai */
+  padding-top: 50px;
+  width: 90%;
+}
+
+.arch h2 {
+  font-style: italic;
+  font-weight: 200px;
+	font-size:x-large;
+  margin-bottom: 20px;
+
+}
+
+.job {
+  margin-bottom: 40px;
+}
+
+.job h3 {
+  font-style: italic;
+  font-weight: bold;
+font-size: large;
+}
+
+ul {
+  margin-top: 0px;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 0px;
+}
+
+
+  .navbar-brand {
+    font-family:  'Parisienne'; 
+   font-weight: 100px; 
+    font-size: 50px; 
+    color: #3b2f2f; 
+  }
+
+
+
+    /* Navbar */
+    .navbar {
+      background-color:#d4c7af;
+font-family: 'Playfair Display', serif;
+font-size:17px;
+    color:#3b2f2f;
+      padding-top: 5px; /*  important  */
+  padding-bottom: 0px
+      
+    }
+
+    /* Section Titles */
+    h2 {
+      margin-bottom: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+
+    /* Footer */
+    footer {
+      background-color: #d4c7af;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+.social-icons {
+  position: fixed;
+  bottom: 20px; /* Bottom distance */
+  right: 20px;  /* Right distance */
+  display: flex;
+  flex-direction: column; /* Icons vertical */
+  gap: 10px; /* Icons center space */
+  z-index: 1000; /* top elements */
+}
+
+.social-icons a {
+  background-color: #333;
+  color: #d4c7af;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #695850;
+  transform: scale(1.1); /* Hover zoom effect */
+}
+
+.social-icons i {
+  font-size: 15px;
+}
+
+
+.decor-star {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #3b2f2f;
+      clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
+    }
+
+    .decor-star.small {
+      width: 13px;
+      height: 13px;
+    }
+
+    .star1 {
+      top: 28%;
+      left: 60%;
+    }
+
+    .star2 {
+      bottom: 20%;
+      right: 20%;
+    }
+
+.star3 {
+      bottom: 20%;
+      right: 80%;
+    }
+.star4 {
+      bottom: 75%;
+      left: 10%;
+    }
+.star5 {
+      bottom: 90%;
+      right: 10%;
+    }
+.projects {
+  background-color: #8d765b;
+}
+
+.project-card {
+  background-color: #d4c7af;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.btn-project {
+background-color: #3b2f2f;
+   border-color: #3b2f2f;
+border-radius: 10px;
+    color: white; /* Text color */
+  }
+
+.btn-project:hover {
+background-color: #8d765b;
+border-color: #3b2f2f;
+  transform: translateY(-10px);
+}
+
+ /* default icon color + hover state */
+    .designing-tools svg {
+      color:#3b2f2f;   
+      transition: color 0.3s;
+    }
+    .designing-tools svg:hover {
+      color: #695850;            
+    }
+    /* center the section title */
+    .designing-tools h2 {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+     .designing-tools {
+  background-color: #d4c7af;  /* your desired hex, RGB, or CSS variable */
+}
+
+.programming-skills h6 {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.progress {
+  background-color: #8d765b;
+  border-radius: 10px;
+}
+.progress-bar {
+  border-radius: 10px;
+}
+
+
+
+
+  </style>
+
+  <!-- Font Awesome for Social Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light  sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Sara</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://drive.google.com/file/d/1aylehvSE2h31mb9fjhnm2zjuJV_xlpHd/view?usp=drive_link">Resume</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Home Section -->
+<section id="home" class="home">
+  <div class="container">
+    <h1>Hi, I'm Sara</h1>
+	<p class="tagline">A Passionate Web Developer</p>
+
+    <div class="contact-details">
+      <div class="contact-item">
+        <i class="fas fa-phone"></i> +91 9935090685
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i> saraimtiyaz23@gmail.com
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i> Bangalore, India
+      </div>
+ </div>
+
+<!-- Resume Section -->
+
+  <div class="container">
+   <a href="https://drive.google.com/file/d/1aylehvSE2h31mb9fjhnm2zjuJV_xlpHd/view?usp=drive_link" class="btn btn-primary btn-project btn-sm mt-3">View Resume</a>
+  </div>
+
+ <div class="decor-star star1"></div>
+    <div class="decor-star small star2"></div>
+<div class="decor-star star3"></div>
+<div class="decor-star small star4"></div>
+<div class="decor-star medium star5"></div>
+    
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="experience">
+
+  <div class="arch">
+<div class="inner-content">
+    <h2>Working Experiences</h2>
+
+    <div class="job">
+      <p><em>Nov 2022 – March 2025</em></p>
+      <h3>Software Engineer | HMIS Consultant</h3>
+      <p>DRiefcase Health Tech Pvt Ltd, Mumbai</p>
+      <ul>
+        <li>Implemented HMIS software in private hospitals and trained doctors/staff. </li>
+        <li>Handled technical support and issue resolution for OPD and HMIS systems. </li>
+        <li>Developed training materials and supported smooth onboarding.</li>
+        <li>Signage, Signboard, Billboard & Lightbox Design</li>
+       
+        <li>Led and coordinated implementation efforts across multiple cities in Uttar Pradesh. </li>
+      </ul>
+    </div>
+
+</section>
+
+
+
+
+<!-- Programming Skills Section -->
+<section id="programming-skills" class="py-5 background-color:#d4c7af;">
+  <div class="container">
+    <h2 class="text-center mb-5">Programming Skills</h2>
+    <div class="row">
+
+      <!-- Left Side -->
+      <div class="col-md-6">
+        <!-- HTML -->
+        <div class="mb-3">
+          <h6>HTML</h6>
+          <div class="progress" style="height: 12px;">
+            <div class="progress-bar " role="progressbar" style="width: 85%; background-color:#3b2f2f;" aria-valuenow="90"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <!-- CSS -->
+        <div class="mb-3">
+          <h6>CSS</h6>
+          <div class="progress" style="height: 12px;">
+            <div class="progress-bar role="progressbar" style="width: 80%;  background-color:#3b2f2f;" aria-valuenow="85"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="mb-3">
+          <h6>JavaScript</h6>
+          <div class="progress" style="height: 12px;">
+            <div class="progress-bar " role="progressbar" style="width: 60%;  background-color:#3b2f2f;" aria-valuenow="70"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      <div class="col-md-6">
+        <!-- Python -->
+        <div class="mb-3">
+          <h6>Python</h6>
+          <div class="progress" style="height: 12px;">
+            <div class="progress-bar " role="progressbar" style="width: 75%;background-color:#3b2f2f;" aria-valuenow="75"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <!-- Java -->
+        <div class="mb-3">
+          <h6>Java</h6>
+          <div class="progress" style="height: 12px;">
+            <div class="progress-bar" role="progressbar" style="width: 50%;background-color:#3b2f2f;" aria-valuenow="65"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <!-- MySQL -->
+        <div class="mb-3">
+          <h6>MySQL</h6>
+          <div class="progress" style="height: 12px;">
+            <div class="progress-bar " role="progressbar" style="width: 40%; background-color:#3b2f2f;" aria-valuenow="80"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Designing Tools Section -->
+<section id="designing-tools" class="py-5 ">
+  <div class="container">
+    <h2 class="text-center mb-5">Designing Tools</h2>
+    <div class="d-flex justify-content-center align-items-center">
+
+      <!-- Photoshop (Ps) -->
+      <div class="mx-5">
+        <svg width="60" height="60" viewBox="0 0 100 100" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <rect width="100" height="100" rx="15" ry="15"/>
+          <text x="20" y="65" font-size="50" font-family="Arial, sans-serif" fill="white">Ps</text>
+        </svg>
+        <h6 class="mt-3">Photoshop</h6>
+      </div>
+
+      <!-- Illustrator (Ai) -->
+      <div class="mx-5">
+        <svg width="60" height="60" viewBox="0 0 100 100" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <rect width="100" height="100" rx="15" ry="15"/>
+          <text x="22" y="65" font-size="50" font-family="Arial, sans-serif" fill="white">Ai</text>
+        </svg>
+        <h6 class="mt-3">Illustrator</h6>
+      </div>
+
+      <!-- Canva (Ca) -->
+      <div class="mx-5">
+        <svg width="60" height="60" viewBox="0 0 100 100" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <rect width="100" height="100" rx="15" ry="15"/>
+          <text x="17" y="65" font-size="50" font-family="Arial, sans-serif" fill="white">Ca</text>
+        </svg>
+        <h6 class="mt-3">Canva</h6>
+      </div>
+
+      <!-- Figma -->
+      <div class="mx-5">
+        <div style="width: 60px; height: 60px; margin: 0 auto;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="currentColor">
+            <path d="M64 64c0-8.8 7.2-16 16-16h16c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16zm-32-32c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H48c-8.8 0-16-7.2-16-16zm0 32c0-8.8 7.2-16 16-16s16 7.2 16 16-7.2 16-16 16-16-7.2-16-16zm0 32c0-8.8 7.2-16 16-16s16 7.2 16 16-7.2 16-16 16-16-7.2-16-16z"/>
+          </svg>
+        </div>
+        <h6 class="mt-3">Figma</h6>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Education Section -->
+<section class="experience">
+  <div class="arch">
+<div class="inner-content">
+    <h2>Education</h2>
+
+    <div class="job">
+      <p><em>2017 – 2021</em></p>
+      <h3>HMFA Memorial Institute of Engineering & Technology</h3>
+      <p>B.Tech in Computer Science & Engineering | CGPA-7.4</p>
+    </div>
+	
+	<div class="job">
+      <p><em>2014 – 2016</em></p>
+      <h3>National Inter College</h3>
+      <p>Intermediet | Percentage-72.3%</p>
+    </div>
+
+    <div class="job">
+      <p><em>2013 - 2014</em></p>
+      <h3>National Inter College</h3>
+      <p>Highscool | Percentage-79.3%</p>
+    </div>
+
+</section>
+
+
+<!-- Social Section -->
+<div class="social-icons">
+  <a href="https://linkedin.com/in/sara-imtiyaz" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <a href="https://github.com/SaraImtiyaz22" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="https://instagram.com/sara_imtiyaz_ansari/"><i class="fab fa-instagram"></i></a>  
+<a href="mailto:saraimtiyaz23@gmail.com"><i class="fas fa-envelope"></i></a>
+  
+</div>
+
+
+
+
+<!-- Projects Section -->
+<section id="projects" class="projects py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">My Projects</h2>
+    
+    <div class="row g-4">
+      
+      <!-- Project 1 -->
+      <div class="col-md-4">
+        <div class="project-card p-4 shadow rounded text-center h-100">
+          <h4>Hotel Management System</h4>
+          <p>A web application to manage hotel bookings, customers, and staff efficiently with real-time updates.</p>
+          <a href="#" class="btn btn-primary btn-project btn-sm mt-3">View Project</a>
+
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-4">
+        <div class="project-card p-4 shadow rounded text-center h-100">
+          <h4>E-Commerce Website</h4>
+          <p>Built a fully functional online store with shopping cart, user authentication, and payment integration.</p>
+          <a href="#" class="btn btn-primary btn-project btn-sm mt-3">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-4">
+        <div class="project-card p-4 shadow rounded text-center h-100">
+          <h4>Portfolio Website</h4>
+          <p>A personal portfolio website showcasing my projects, skills, and contact details with a modern design.</p>
+          <a href="#" class="btn btn-primary btn-project btn-sm mt-3">View Project</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Sara's Portfolio. All Rights Reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
